@@ -1,5 +1,7 @@
 Cassandra Data Modeling Tool
-=====================
+============================
+[Don't model data, model queries]
+----------------------------------
 
 This is to create data modeling tool to analyze existing SQL queries (from RDBMS) and generate Cassandra data model and tables. Also, attempt to generate equivalent CQL queries for read/write and migration of existing data to cassandra. This will be primarily used for migrating existing application to Cassandra.
 
@@ -8,6 +10,7 @@ Users can provide SQLs from there existing appliation, as generally every applic
 This can be used in migrating existing application from RDBMS to Cassandra. Cassandra mainly differs from RDBMS in following ways:
 * It is denormalized, no joins.
 * No Group By or aggregation.
+* Ad-hoc query restricted to have condition on primary key(partition+segmentation) only and in order.
 * No ACID transaction.
 
 Tables in Cassandra store results of queries, so we can analyze existing SQL queries to figure out what data model can answer these queries. Then we can express tables in this data model in CQL (DDLs to create tables incassandra). Also, we can generate code/scripts for migrating existing data from RDBMS to Cassandra.
@@ -23,6 +26,8 @@ Initial design and technology stack:
   *  Analyse sub-queries to figure out final query result.
 
 For this we can use https://github.com/FoundationDB/sql-parser
+
+Demo for analyzing and visualizing SQL based using this http://sylentprayer.github.io
 
 * Based on the information collected we can figure out what data model (minimal and optimal set of tables) can answer all the queries. 
   This is the core of application. Other functionalities like migration code can be done based on this.
