@@ -31,7 +31,6 @@ function queryVis(data){
 			xOffset=i*150;
 			yOffset=(lastTableCols+3)*30;
 		}
-		alert(xOffset+" "+key+yOffset);
 		var table = new joint.shapes.basic.Rect({
 			position: { x: 100+xOffset, y: 30+yOffset },
 			size: { width: 200, height: 30 },
