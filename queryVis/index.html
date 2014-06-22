@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="joint.css" />
+		<script src="joint.js"></script>
+		<script src="queryViz.js"></script>
+	</head>
+	<body>
+		<div id="myholder"/>
+		<script type="text/javascript">
+			var data={"parser":{"COLUMN_REF":[{"tableName":"t1","columnName":"col2","columnAlias":"col2","isDistinct":false},{"tableName":"t2","columnName":"col2","columnAlias":"col2","isDistinct":false},{"tableName":"t3","columnName":"col3","columnAlias":"col3","isDistinct":false},{"tableName":"t4","columnName":"col2","columnAlias":"col2","isDistinct":false},{"tableName":"t1","tableAlias":"t1","columnName":"col1","columnAlias":"col1","isDistinct":false},{"tableName":"t2","tableAlias":"t2","columnName":"col1","columnAlias":"col1","isDistinct":false},{"tableName":"t1","tableAlias":"t1","columnName":"col2","columnAlias":"col2","isDistinct":false},{"tableName":"t2","tableAlias":"t2","columnName":"col2","columnAlias":"col2","isDistinct":false},{"tableName":"t2","tableAlias":"t2","columnName":"col2","columnAlias":"col2","isDistinct":false},{"tableName":"t4","tableAlias":"t4","columnName":"col2","columnAlias":"col2","isDistinct":false},{"tableName":"t2","tableAlias":"t2","columnName":"col1","columnAlias":"col1","isDistinct":false},{"tableName":"t4","tableAlias":"t4","columnName":"col1","columnAlias":"col1","isDistinct":false},{"tableName":"t3","tableAlias":"t3","columnName":"col1","columnAlias":"col1","isDistinct":false},{"tableName":"t3","tableAlias":"t3","columnName":"col2","columnAlias":"col2","isDistinct":false},{"tableName":"t4","tableAlias":"t4","columnName":"col2","columnAlias":"col2","isDistinct":false}],"GROUP_BY":[{"table":"t3","column":"col1","order":false},{"table":"t3","column":"col2","order":false}],"JOIN_LINK":[{"leftTable":"t1","rightTable":"t2","leftTableColumn":"col1","rightTableColumn":"col1"},{"leftTable":"t1","rightTable":"t2","leftTableColumn":"col2","rightTableColumn":"col2"},{"leftTable":"t2","rightTable":"t4","leftTableColumn":"col2","rightTableColumn":"col2"},{"leftTable":"t2","rightTable":"t4","leftTableColumn":"col1","rightTableColumn":"col1"}],"ORDER_BY":[{"table":"t4","column":"col2","order":true}],"FILTERS":[]},"children":[]}
+;
+			queryVis(data.parser);
+		</script>
+	</body>
+</html>
